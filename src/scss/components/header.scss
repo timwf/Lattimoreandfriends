@@ -1,0 +1,23 @@
+.header{
+  position: fixed;
+  width: 100%;
+  height: 99px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 9;
+
+  &__open{
+    padding-left: 30px;
+
+    &:hover{
+      opacity: 0.4;
+    }
+  }
+
+  &__open--home{
+    &:hover{
+      opacity: 0.4;
+    }
+  }
+}
