@@ -48,10 +48,12 @@ module.exports = {
           `gatsby-remark-smartypants`,
         ],
       },
-    },
+    },  
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sass`,
+    "gatsby-plugin-react-svg",
+    
     // {
     //   resolve: `gatsby-plugin-google-analytics`,
     //   options: {

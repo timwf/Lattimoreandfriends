@@ -43,21 +43,28 @@ table {
 }
 
 a{
-  cursor: none !important;
+  cursor: none !important; 
+  text-decoration: none;
+  color: black;
 }
 
 body{
   overflow: hidden;
-  overflow: hidden;
   cursor: none !important;
+  background-color: #F1F1F1;
 }
 
 .mouse-cursor{
-  position: absolute;
-  z-index: 99999;
-  pointer-events: none;
-  transition: transform 0.4s;
-  opacity: 0;
+  display: none;
+
+  @media (min-width: 1025px){
+    display: block;
+    position: absolute;
+    z-index: 99999;
+    pointer-events: none;
+    transition: transform 0.4s;
+    opacity: 0;
+  }
 
   &.active{
     transform: rotate(135deg);
@@ -77,13 +84,80 @@ body{
 }
 
 .container{
-  padding-left: 38px;
-  padding-right: 38px;
+  padding-left: 16px;
+  padding-right: 16px;
+
+  @media (min-width: 768px){
+    padding-left: 27px;
+    padding-right: 27px;
+  }
+
+  @media (min-width: 1024px){
+    padding-left: 41px;
+    padding-right: 41px;
+  }
+}
+
+.page-wrap{
+  padding-top: 100px;
+  min-height: 100vh;
 }
 
 * {
   box-sizing: border-box;
 }
+
+
+//typography
+
+.header-upper-large{
+  font-family: 'gt-flexa-medium'; 
+  font-size: 25px;  
+  line-height: 30px;
+
+
+  @media (min-width: 768px){
+    font-size: 50px;  
+    line-height: 60px;
+  }
+
+  @media (min-width: 1024px){
+    font-size: 70px;  
+    line-height: 80 px;
+  }
+}
+
+.quote{
+  font-family: 'gt-flexa-mono-italic'; 
+  font-size: 25px;  
+  line-height: 30px;
+
+
+  @media (min-width: 768px){
+    font-size: 50px;  
+    line-height: 60px;
+  }
+
+  @media (min-width: 1024px){
+    font-size: 70px;  
+    line-height: 80 px;
+  }
+}
+
+.menu-font{
+  font-family: 'gt-flexa-mono'; 
+  font-size: 20px;  
+  line-height: 24 px;
+
+
+  @media (min-width: 768px){
+    font-size: 40px;  
+    line-height: 5 0px;
+  }
+}
+
+
+
 
 @font-face {
   font-family: 'gt-flexa-medium';
@@ -94,4 +168,9 @@ body{
 @font-face {
   font-family: 'gt-flexa-mono';
   src: url('../../fonts/GT-Flexa-Mono-Regular-Trial.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'gt-flexa-mono-italic';
+  src: url('../../fonts/GT-Flexa-Mono-Regular-Italic-Trial.woff2') format('woff2');
 }
